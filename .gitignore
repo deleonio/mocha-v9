@@ -1,0 +1,6 @@
+.reports/
+controls/
+handlers/
+node_modules/
+umd/
+*.tgz
