@@ -1,0 +1,52 @@
+{
+  "name": "@leanup/form",
+  "version": "1.2.0-rc.92",
+  "description": "This module contains useful features for handling forms.",
+  "author": "Martin Oppitz <npmjs@martinoppitz.com>",
+  "homepage": "https://github.com/leanupjs/form#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanupjs/leanup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leanupjs/leanup/issues"
+  },
+  "dependencies": {
+    "@leanup/lib": "1.2.0-rc.91"
+  },
+  "devDependencies": {
+    "@types/chai": "4.2.21",
+    "@types/node": "16.3.3",
+    "@types/sinon": "10.0.2",
+    "chai": "4.3.4",
+    "cross-env": "7.0.3",
+    "esbuild-register": "2.6.0",
+    "esm": "3.2.25",
+    "jsdom": "16.6.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "8.4.0",
+    "mock-local-storage": "1.1.17",
+    "nyc": "15.1.0",
+    "sinon": "11.1.1",
+    "typescript": "4.3.5"
+  },
+  "scripts": {
+    "test": "npx cross-env NODE_ENV=test nyc --check-coverage mocha",
+    "prepack": "npm test && rm -rf index.* controls handlers umd && tsc",
+    "remove": "rm -rf node_modules",
+    "reinstall": "npm run remove && npm run update",
+    "postinstall": "npm test",
+    "update": "npm install && npm update && npm outdated"
+  },
+  "files": [
+    "controls/**/*.d.ts",
+    "controls/**/*.js",
+    "controls/**/*.js.map",
+    "handlers/**/*.d.ts",
+    "handlers/**/*.js",
+    "handlers/**/*.js.map",
+    "umd/**/*.js",
+    "umd/**/*.js.map"
+  ]
+}
