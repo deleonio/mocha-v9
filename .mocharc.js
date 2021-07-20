@@ -10,7 +10,7 @@ module.exports = {
   reporter: "spec",
   require: ["esbuild-register", "jsdom-global/register", "mock-local-storage"],
   spec: [
-    "src/**/*.spec.*s*",
+    "src/**/*.spec.*ss*",
     "src/**/*.test.*s*",
     "tests/unit/**/*.spec.*s*",
     "tests/unit/**/*.test.*s*",
