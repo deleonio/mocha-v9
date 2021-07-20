@@ -8,12 +8,7 @@ module.exports = {
   extension: ["js", "jsx", "ts", "tsx"],
   package: "./package.json",
   reporter: "spec",
-  require: [
-    "esbuild-register",
-    "jsdom-global/register",
-    "mock-local-storage",
-    "esm",
-  ],
+  require: ["esbuild-register", "jsdom-global/register", "mock-local-storage"],
   spec: [
     "src/**/*.spec.*s*",
     "src/**/*.test.*s*",
